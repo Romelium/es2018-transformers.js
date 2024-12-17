@@ -1,4 +1,15 @@
+There was only a few things that were incompatible with es2018 and obsidian, so I hacked the output files to replace the incompatible code with compatible ones.
 
+Just add to your dependencies like this
+```json
+{
+	"dependencies": {
+		"@huggingface/transformers": "https://github.com/Romelium/es2018-transformers.js"
+	}
+}
+```
+
+---
 
 <p align="center">
     <br/>
