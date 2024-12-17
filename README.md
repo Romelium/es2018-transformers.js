@@ -8,7 +8,7 @@ Just add to your dependencies like this
 	}
 }
 ```
-
+This is using version 3.2.0 of [transformers.js](https://github.com/huggingface/transformers.js)
 ---
 
 <p align="center">
