@@ -4,9 +4,9 @@
   "compilerOptions": {
     // Tells the compiler to check JS files
     "checkJs": true,
-    "target": "esnext",
-    "module": "nodenext",
-    "moduleResolution": "nodenext"
+    "target": "ES2018",
+    "module": "Node16",
+    "moduleResolution": "Node16"
   },
   "typeAcquisition": {
     "include": ["jest"]
