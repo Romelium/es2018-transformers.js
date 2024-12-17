@@ -134,7 +134,7 @@ export class SeamlessM4TFeatureExtractor extends FeatureExtractor {
                         new BigInt64Array(numPaddedFrames),
                         [1, numPaddedFrames],
                     )
-                    padded_attention_mask.data.fill(1n, 0, num_frames);
+                    padded_attention_mask.data.fill(BigInt(1), 0, num_frames);
                 }
             }
         }
@@ -166,7 +166,7 @@ export class SeamlessM4TFeatureExtractor extends FeatureExtractor {
                     attention_mask_data[j] = padded_attention_mask_data[i];
                 }
             } else {
-                attention_mask_data.fill(1n);
+                attention_mask_data.fill(BigInt(1));
             }
             result.attention_mask = new Tensor(
                 'int64',

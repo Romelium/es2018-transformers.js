@@ -1423,7 +1423,7 @@ export function full_like(tensor, fill_value) {
  * @returns {Tensor} The ones tensor.
  */
 export function ones(size) {
-    return fullHelper(size, 1n, 'int64', BigInt64Array);
+    return fullHelper(size, BigInt(1), 'int64', BigInt64Array);
 }
 
 /**
@@ -1441,7 +1441,7 @@ export function ones_like(tensor) {
  * @returns {Tensor} The zeros tensor.
  */
 export function zeros(size) {
-    return fullHelper(size, 0n, 'int64', BigInt64Array);
+    return fullHelper(size, BigInt(0), 'int64', BigInt64Array);
 }
 
 /**

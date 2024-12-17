@@ -38,7 +38,7 @@ export class Wav2Vec2FeatureExtractor extends FeatureExtractor {
         const shape = [1, input_values.length];
         return {
             input_values: new Tensor('float32', input_values, shape),
-            attention_mask: new Tensor('int64', new BigInt64Array(input_values.length).fill(1n), shape)
+            attention_mask: new Tensor('int64', new BigInt64Array(input_values.length).fill(BigInt(1)), shape)
         };
     }
 }

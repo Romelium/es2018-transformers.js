@@ -707,7 +707,7 @@ function cumsum_masked_fill(attention_mask, start_index = 0) {
         let sum = BigInt(start_index);
         for (let j = 0; j < seq_len; ++j) {
             const index = start + j;
-            if (attn_mask_data[index] === 0n) {
+            if (attn_mask_data[index] === BigInt(0)) {
                 data[index] = BigInt(1);
             } else { // === 1n
                 data[index] = sum;
@@ -826,7 +826,7 @@ function multimodality_prepare_inputs_for_generation(self, input_ids, model_inpu
             ], 0);
             model_inputs.attention_mask = cat([
                 model_inputs.attention_mask,
-                full_like(model_inputs.attention_mask, 0n),
+                full_like(model_inputs.attention_mask, BigInt(0)),
             ], 0);
         }
     }
@@ -5474,7 +5474,7 @@ export class SamModel extends SamPreTrainedModel {
             const numElements = shape.reduce((a, b) => a * b, 1);
             model_inputs.input_labels = new Tensor(
                 'int64',
-                new BigInt64Array(numElements).fill(1n),
+                new BigInt64Array(numElements).fill(BigInt(1)),
                 shape
             );
         }

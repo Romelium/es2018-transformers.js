@@ -28,7 +28,7 @@ export class DetrImageProcessor extends ImageProcessor {
         // TODO support different mask sizes (not just 64x64)
         // Currently, just fill pixel mask with 1s
         const maskSize = [result.pixel_values.dims[0], 64, 64];
-        const pixel_mask = full(maskSize, 1n);
+        const pixel_mask = full(maskSize, BigInt(1));
 
         return { ...result, pixel_mask };
     }
